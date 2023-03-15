@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+button{
+    margin: 10px 0px;
+    height: 50px;
+    width: 100px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: #ccc;
+    padding: 3px 0px;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+main ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 20px;
+    list-style: none;
+}
+
+main li {
+    border: 1px solid #ccc;
+    padding:0px 30px;
+}
+
+main li:hover {
+    border-color: #333;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+main h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+main p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        display: flex;
+        justify-content: center;
+    }
+    
+    footer p {
+        margin: 0 20px;
+    }
+}
+@media screen and (min-width: 768px) {
+    main ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main ul {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+}
